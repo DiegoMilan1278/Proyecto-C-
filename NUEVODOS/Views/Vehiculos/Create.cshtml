@@ -1,0 +1,141 @@
+﻿@model NUEVODOS.Models.Vehiculo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container" style="font-family:serif; font-weight: bold">
+    <div class="row">
+        <div class="col-sm-12">
+            <br />
+            <h3 class="text-center">Registro de vehiculo</h3>
+        </div>
+        <div class="col-sm-6 offset-sm-3">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <br />
+                <div class="form-group">
+                    <label asp-for="Placa" class="control-label">Placa del vehiculo</label>
+                    <input asp-for="Placa" class="form-control" />
+                    <span asp-validation-for="Placa" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Vehiculo1" class="control-label">Vehiculo</label>
+                    <input asp-for="Vehiculo1" class="form-control" />
+                    <span asp-validation-for="Vehiculo1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Marca" class="control-label">Marca</label>
+                    <input asp-for="Marca" class="form-control" />
+                    <span asp-validation-for="Marca" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Modelo" class="control-label">Modelo</label>
+                    <input asp-for="Modelo" class="form-control" />
+                    <span asp-validation-for="Modelo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Capacidad" class="control-label">Capacidad</label>
+                    <input asp-for="Capacidad" class="form-control" />
+                    <span asp-validation-for="Capacidad" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Tipo" class="control-label">Tipo</label>
+                    <input asp-for="Tipo" class="form-control" />
+                    <span asp-validation-for="Tipo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Color" class="control-label">Color</label>
+                    <input asp-for="Color" class="form-control" />
+                    <span asp-validation-for="Color" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Servicio" class="control-label">Servicio</label>
+                    <input asp-for="Servicio" class="form-control" />
+                    <span asp-validation-for="Servicio" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Linea" class="control-label">Linea</label>
+                    <input asp-for="Linea" class="form-control" />
+                    <span asp-validation-for="Linea" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Motor" class="control-label">Motor</label>
+                    <input asp-for="Motor" class="form-control" />
+                    <span asp-validation-for="Motor" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Chasis" class="control-label">Chasis</label>
+                    <input asp-for="Chasis" class="form-control" />
+                    <span asp-validation-for="Chasis" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Serie" class="control-label">Serie</label>
+                    <input asp-for="Serie" class="form-control" />
+                    <span asp-validation-for="Serie" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Empresa" class="control-label">Empresa</label>
+                    <input asp-for="Empresa" class="form-control" />
+                    <span asp-validation-for="Empresa" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Matricula" class="control-label">Matricula</label>
+                    <input asp-for="Matricula" class="form-control" />
+                    <span asp-validation-for="Matricula" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Kilometraje" class="control-label">Kilometraje</label>
+                    <input asp-for="Kilometraje" class="form-control" />
+                    <span asp-validation-for="Kilometraje" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Cilindraje" class="control-label">Cilindraje</label>
+                    <input asp-for="Cilindraje" class="form-control" />
+                    <span asp-validation-for="Cilindraje" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Combustible" class="control-label">Combustible</label>
+                    <input asp-for="Combustible" class="form-control" />
+                    <span asp-validation-for="Combustible" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Traccion" class="control-label">Tracción</label>
+                    <input asp-for="Traccion" class="form-control" />
+                    <span asp-validation-for="Traccion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Soat" class="control-label">Soat</label>
+                    <input asp-for="Soat" class="form-control" />
+                    <span asp-validation-for="Soat" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Tecnomecanica" class="control-label">Tecnomecánica</label>
+                    <input asp-for="Tecnomecanica" class="form-control" />
+                    <span asp-validation-for="Tecnomecanica" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Correadentada" class="control-label">Correa dentada</label>
+                    <input asp-for="Correadentada" class="form-control" />
+                    <span asp-validation-for="Correadentada" class="text-danger"></span>
+                </div>
+                <div class="form-group text-center">
+                    <br />
+                    <button type="submit" class="btn btn-info">Registrar</button>
+                    <a type="submit" class="btn btn-danger" asp-controller="Vehiculos" asp-action="Index">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+

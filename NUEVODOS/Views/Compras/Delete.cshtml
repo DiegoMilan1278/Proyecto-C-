@@ -1,0 +1,71 @@
+﻿@model NUEVODOS.Models.Compra
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<div class="container" style="font-family:serif; font-weight: bold">
+    <div class="row">
+        <div class="col-sm-12">
+            <br />
+            <h3 class="text-center">ELIMINAR</h3>
+        </div>
+        <div class="col-sm-6 offset-sm-3">
+            <div class="form-group">
+                <label asp-for="Idcompra" class="control-label">ID de la compra</label>
+                <input asp-for="Idcompra" class="form-control" disabled />
+                <span asp-validation-for="Idcompra" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Placacompra" class="control-label"></label>
+                <input asp-for="Placacompra" class="form-control" disabled />
+                <span asp-validation-for="Placacompra" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Fechacompra" class="control-label">Fecha de la compra</label>
+                <input asp-for="Fechacompra" class="form-control" disabled />
+                <span asp-validation-for="Fechacompra" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Preciocompra" class="control-label">Precio de la compra</label>
+                <input asp-for="Preciocompra" class="form-control" disabled />
+                <span asp-validation-for="Preciocompra" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Mpcompra" class="control-label">Método de pago</label>
+                <input asp-for="Mpcompra" class="form-control" disabled />
+                <span asp-validation-for="Mpcompra" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Limitacionescompra" class="control-label">Limitaciones</label>
+                <input asp-for="Limitacionescompra" class="form-control" disabled />
+                <span asp-validation-for="Limitacionescompra" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Ciudadcompra" class="control-label">Ciudad</label>
+                <input asp-for="Ciudadcompra" class="form-control" disabled />
+                <span asp-validation-for="Ciudadcompra" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Spcompra" class="control-label">Sanción pecunaria</label>
+                <input asp-for="Spcompra" class="form-control" disabled />
+                <span asp-validation-for="Spcompra" class="text-danger"></span>
+            </div>
+            <form asp-action="Delete" class="text-center">
+                <input type="hidden" asp-for="Idcompra" />
+                <input type="submit" value="Delete" class="btn btn-danger" />
+                <a type="submit" class="btn btn-dark" asp-controller="Compras" asp-action="Index">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
