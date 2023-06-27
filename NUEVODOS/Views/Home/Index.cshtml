@@ -15,7 +15,7 @@
             <div class="col-sm-6">
 
                 <div class="card">
-                    <div class="card-header text-center" style="font-family:serif; font-weight: bold; background-color: rgba(196, 28, 28, 0.1)">Ventas ultimos 5 días </div>
+                    <div class="card-header text-center" style="font-family:serif; font-weight: bold; background-color: rgba(196, 28, 28, 0.1)">Ventas ultimo mes </div>
                     <div class="card-body" style="background-color:rgba(196, 28, 28, 0.1)">
                         <canvas id="chartVentas" style="max-height:250px"></canvas>
                     </div>
@@ -36,8 +36,6 @@
                             return response.ok ? response.json() : Promise.reject(response);
                         })
                         .then((dataJson) => {
-
-                            // console.log((dataJson)
 
                             const labels = dataJson.map((item) => { return item.fecha })
                             const values = dataJson.map((item) => { return item.cantidad })

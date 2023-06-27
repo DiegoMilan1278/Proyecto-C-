@@ -15,21 +15,20 @@ namespace NUEVODOS.Controllers
             _dbcontext = context;
         }
 
-        public IActionResult resumenVenta()
+        public IActionResult ResumenVenta()
         {
-            DateTime FechaInicio = DateTime.Now;
-            FechaInicio = FechaInicio.AddDays(-5);
-            var Lista = (from data in _dbcontext.Ventas.ToList()
-                         group data by data.Fechaventa into gr
-                         select new VMVenta
-                         {
-                             fecha = gr.Key?.ToString("dd/MM/yyyy"), // Convertir la fecha a string
-                             cantidad = gr.Count(),
+            DateTime fechainicio = DateTime.Now;
+            fechainicio = fechainicio.AddDays(-30);
+            List<VMVenta> Lista = (from tbventa in _dbcontext.Ventas
+                                   where tbventa.Fechaventa.Value.Date >= fechainicio.Date
+                                   group tbventa by tbventa.Fechaventa.Value.Date into grupo
+                                   select new VMVenta
+                                   {
+                                       fecha = grupo.Key.ToString("dd/MM/yyyy"),
+                                       cantidad = grupo.Count(),
+                                   }).ToList();
 
-                         });
-
-            return Ok(Lista);
-
+            return StatusCode(StatusCodes.Status200OK, Lista);
         }
 
         public IActionResult Index()
